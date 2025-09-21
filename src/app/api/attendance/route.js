@@ -47,7 +47,7 @@ export async function GET() {
 export async function PUT(req){
     try{
         await dbConnect();
-        const body = req.json();
+        const body = await req.json();
         const { id, status } = body;
         if(!id){
             return NextResponse.json({ error: "Attendance ID is required", status : 500})
