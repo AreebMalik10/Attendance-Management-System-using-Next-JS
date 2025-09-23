@@ -9,16 +9,12 @@ import {
   Paper,
   IconButton,
   InputAdornment,
-  Divider,
 } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import GoogleIcon from '@mui/icons-material/Google';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import AppleIcon from '@mui/icons-material/Apple';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -44,25 +40,14 @@ export default function Login() {
           backdropFilter: 'blur(8px)',
         }}
       >
-        <Box
-          sx={{
-            mb: 2,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <ArrowForwardIcon sx={{ fontSize: 40, bgcolor: '#e0f7fa', borderRadius: 2, p: 1 }} />
-        </Box>
         <Typography variant="h5" fontWeight={700} mb={1}>
-          Sign in with email
+          Sign in with username
         </Typography>
         <Typography variant="body2" color="text.secondary" mb={3}>
-          Make a new doc to bring your words, data, and teams together. For free
+           Enter your credentials to access your account and manage attendance easily.
         </Typography>
         <TextField
           fullWidth
-          variant="outlined"
           margin="normal"
           placeholder="Email"
           InputProps={{
@@ -97,11 +82,11 @@ export default function Login() {
             ),
           }}
         />
-        <Box sx={{ textAlign: 'right', mb: 2 }}>
+        {/* <Box sx={{ textAlign: 'right', mb: 2 }}>
           <Button variant="text" size="small">
             Forgot password?
           </Button>
-        </Box>
+        </Box> */}
         <Button
           fullWidth
           variant="contained"
@@ -119,18 +104,7 @@ export default function Login() {
         >
           Get Started
         </Button>
-        <Divider sx={{ my: 2 }}>Or sign in with</Divider>
-        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
-          <IconButton>
-            <GoogleIcon sx={{ fontSize: 28 }} />
-          </IconButton>
-          <IconButton>
-            <FacebookIcon sx={{ fontSize: 28 }} />
-          </IconButton>
-          <IconButton>
-            <AppleIcon sx={{ fontSize: 28 }} />
-          </IconButton>
-        </Box>
+        
       </Paper>
     </Box>
   );
