@@ -33,7 +33,7 @@ const handler = NextAuth({
     strategy: 'jwt',
   },
   pages: {
-    signIn: "/login" // ✅ correct key is signIn (capital I)
+    signIn: "/login"
   },
   callbacks: {
     async jwt({ token, user }) {
