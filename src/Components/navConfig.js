@@ -4,11 +4,12 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 
 
 export const ROUTES = {
-    dashboard: "/dashboard",
-    attendance: "/attendance",
-    teacher: "/teachers",
-    student: "/students",
-    classes: "/classes",
+    dashboard: "dashboard",
+    attendance: "attendance",
+    teacher: "teacher",
+    student: "student",
+    class: "class",
+    assignClass: "assign-class"
 }
 
 export const navConfig = [
@@ -28,14 +29,14 @@ export const navConfig = [
         url: `/${ROUTES.student}`,
     },
     {
-        label: "Classes",
+        label: "Class",
         icon: <DashboardIcon />,
-        url: `/${ROUTES.classes}`,
+        url: `/${ROUTES.class}`,
         childrens: [
             {
-                label: "Assign Class to Teacher",
+                label: "Assign Class",
                 icon: <DashboardIcon />,
-                url: `/assign-class`
+                url: `/${ROUTES.assignClass}`
             }
         ]
     },
@@ -43,6 +44,6 @@ export const navConfig = [
         label: "Attendance",
         icon: <DashboardIcon />,
         url: `/${ROUTES.attendance}`,
-        
+
     }
 ]
