@@ -1,12 +1,16 @@
 import React from 'react'
+import Header from '../header/page'
 
 export default function Dashboard() {
     console.log("Dashboard Loaded")
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Welcome to your dashboard!</p>
-    </div>
+    <>
+    {/* <Header /> */}
+    <main style={{ padding: "20px" }}>
+        <h1>Welcome to Dashboard</h1>
+      </main>
+    
+    </>
   )
 }
 

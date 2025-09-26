@@ -4,6 +4,7 @@ import "./globals.css";
 import { CssBaseline, Toolbar } from "@mui/material";
 import { usePathname } from "next/navigation";
 import Sidebar from "@/Components/Sidebar";
+import Header from "./header/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,11 +34,10 @@ export default function RootLayout({ children }) {
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CssBaseline />
+        <Header />
         <div style={{ display: "flex"}}>
-        {/* <div> */}
           {!hideSidebar && <Sidebar /> }
           <main style={{ flexGrow:1, paddingLeft: "20px" ,width: "100%"}}>
-          {/* <main> */}
           {!hideSidebar && <Toolbar /> }
             {children}
           </main>
