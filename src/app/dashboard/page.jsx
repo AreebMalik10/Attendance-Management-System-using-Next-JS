@@ -5,11 +5,8 @@ export default function Dashboard() {
     console.log("Dashboard Loaded")
   return (
     <>
-    {/* <Header /> */}
-    <main style={{ padding: "20px" }}>
+    <Header />
         <h1>Welcome to Dashboard</h1>
-      </main>
-    
     </>
   )
 }

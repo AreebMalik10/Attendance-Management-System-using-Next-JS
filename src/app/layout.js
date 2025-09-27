@@ -34,11 +34,10 @@ export default function RootLayout({ children }) {
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CssBaseline />
-        <Header />
+        {/* {!hideSidebar &&  <Header />} */}
         <div style={{ display: "flex"}}>
           {!hideSidebar && <Sidebar /> }
-          <main style={{ flexGrow:1, paddingLeft: "20px" ,width: "100%"}}>
-          {!hideSidebar && <Toolbar /> }
+          <main style={{width: "100%"}}>
             {children}
           </main>
         </div>
