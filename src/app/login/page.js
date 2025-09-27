@@ -14,10 +14,12 @@ import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { useRouter } from 'next/navigation';
 
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
 
   return (
     <Box
@@ -90,6 +92,7 @@ export default function Login() {
         <Button
           fullWidth
           variant="contained"
+        
           sx={{
             bgcolor: '#222',
             color: '#fff',
@@ -100,6 +103,10 @@ export default function Login() {
             fontSize: 16,
             textTransform: 'none',
             '&:hover': { bgcolor: '#444' },
+          }}
+          onClick={() =>{
+            console.log("login clicked");
+            router.push("/dashboard")
           }}
         >
           Get Started
