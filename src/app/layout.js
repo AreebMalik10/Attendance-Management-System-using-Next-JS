@@ -5,6 +5,9 @@ import { CssBaseline, Toolbar } from "@mui/material";
 import { usePathname } from "next/navigation";
 import Sidebar from "@/Components/Sidebar";
 import Header from "./header/page";
+import { Provider } from "react-redux";
+import store from "@/store";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +37,7 @@ export default function RootLayout({ children }) {
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CssBaseline />
+        <Provider store={store}>
         {/* {!hideSidebar &&  <Header />} */}
         <div style={{ display: "flex"}}>
           {!hideSidebar && <Sidebar /> }
@@ -41,6 +45,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
         </div>
+        </Provider>
       </body>
     </html>
   );
