@@ -6,7 +6,8 @@ export const fetchTeacher = createAsyncThunk(
     async(_, { rejectWithValue }) => {
         try{
             const response = await getTeachersApi();
-            return response;
+            const data = Array.isArray(response) ? response : response?.users || [];
+            return data;
         } catch(err) {
             return rejectWithValue(err?.response?.data);
         }

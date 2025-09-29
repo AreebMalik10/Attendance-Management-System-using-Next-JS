@@ -30,7 +30,7 @@ export default function Teacher() {
   
   return (
     <>
-    <TableComponent tableHeads={tableHeads} />
+    <TableComponent tableHeads={tableHeads} data={filteredData} />
     </>
   )
 }
